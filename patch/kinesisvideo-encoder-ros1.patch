@@ -1,0 +1,66 @@
+diff --git a/h264_video_encoder/CMakeLists.txt b/h264_video_encoder/CMakeLists.txt
+index 832094a..d61299e 100644
+--- a/h264_video_encoder/CMakeLists.txt
++++ b/h264_video_encoder/CMakeLists.txt
+@@ -72,32 +72,32 @@ install(DIRECTORY config/ DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/config
+ ## Tests ##
+ #############
+ 
+-## Add gtest based cpp test target and link libraries
+-if(CATKIN_ENABLE_TESTING)
+-  find_package(rostest REQUIRED)
+-  find_package(GMock QUIET)
+-  if(GMOCK_FOUND)
+-    add_rostest_gmock(test_h264_video_encoder
+-      test/test_h264_video_encoder.test
+-      test/h264_video_encoder_test.cpp
+-    )
+-    target_link_libraries(test_h264_video_encoder
+-      ${PROJECT_NAME}_lib
+-      ${catkin_LIBRARIES}
+-      ${GMOCK_BOTH_LIBRARIES}
+-    )
+-  else()
+-    include_directories(/usr/include/gmock /usr/src/gmock)
+-    add_library(${PROJECT_NAME}_libgmock SHARED /usr/src/gmock/src/gmock-all.cc)
+-
+-    add_rostest_gtest(test_h264_video_encoder
+-      test/test_h264_video_encoder.test
+-      test/h264_video_encoder_test.cpp
+-    )
+-    target_link_libraries(test_h264_video_encoder
+-      ${PROJECT_NAME}_lib
+-      ${catkin_LIBRARIES}
+-      ${PROJECT_NAME}_libgmock
+-    )
+-  endif()
+-endif()
++### Add gtest based cpp test target and link libraries
++#if(CATKIN_ENABLE_TESTING)
++#  find_package(rostest REQUIRED)
++#  find_package(GMock QUIET)
++#  if(GMOCK_FOUND)
++#    add_rostest_gmock(test_h264_video_encoder
++#      test/test_h264_video_encoder.test
++#      test/h264_video_encoder_test.cpp
++#    )
++#    target_link_libraries(test_h264_video_encoder
++#      ${PROJECT_NAME}_lib
++#      ${catkin_LIBRARIES}
++#      ${GMOCK_BOTH_LIBRARIES}
++#    )
++#  else()
++#    include_directories(/usr/include/gmock /usr/src/gmock)
++#    add_library(${PROJECT_NAME}_libgmock SHARED /usr/src/gmock/src/gmock-all.cc)
++#
++#    add_rostest_gtest(test_h264_video_encoder
++#      test/test_h264_video_encoder.test
++#      test/h264_video_encoder_test.cpp
++#    )
++#    target_link_libraries(test_h264_video_encoder
++#      ${PROJECT_NAME}_lib
++#      ${catkin_LIBRARIES}
++#      ${PROJECT_NAME}_libgmock
++#    )
++#  endif()
++#endif()
