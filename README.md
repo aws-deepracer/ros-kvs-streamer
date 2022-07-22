@@ -1,3 +1,5 @@
+## We have made a difficult decision of ceasing active development on this repo as of Jul 2022.
+
 # 1. ROS KVS Stramer
 
 Generic ROS1 kinesis video streamer
